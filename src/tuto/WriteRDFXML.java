@@ -107,7 +107,7 @@ public class WriteRDFXML
 		model.write(System.out, "RDF/XML-ABBREV");
 		//model.write(System.out, "N-TRIPLES");
 		//model.write(System.out, "TURTLE");
-		
+		//model.write(System.out, "N3");
 	}
 	
 }

@@ -23,16 +23,19 @@ public class WriteFoaf
 		//creation des proprietes
 		Property firstname = model.createProperty( NS_FOAF + "firstName" );
 		Property familyName = model.createProperty( NS_FOAF + "familyName" );
-		Property nick = model.createProperty( NS_FOAF + "nick" );
+		//Property nick = model.createProperty( NS_FOAF + "nick" );
 		Property name = model.createProperty( NS_FOAF + "name" );
 		
 		//TODO
 		//need to create a foaf:Person not a generic resource
-		Resource person = model.createResource(personURI);
+		//Resource person = model.createResource(personURI);
+		
+		Resource person = model.createResource(personURI, FOAF.PERSON);
 		
 		person.addProperty(firstname, strgivenName);
 		person.addProperty(familyName, strfamilyName);
-		person.addProperty(nick, strnickName);
+		//person.addProperty(nick, strnickName);
+		person.addProperty(FOAF.nick, strnickName);
 		person.addProperty(name, strfullName);
 		
 		return model;
